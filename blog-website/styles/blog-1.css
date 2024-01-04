@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "retro";
+    src: url("fonts/Retro\ Gaming.ttf");
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: "mc";
+    src: url("fonts/Minecraft.ttf");
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    #nav {
+        background-color: black !important; /* Set the text color to black */
+    }
+    
+.header-text{
+    font-family: "retro";
+    letter-spacing: 0.1rem;
+}
+.marcus{
+    font-size: 120px;
+}
+
+.text{
+    color: white ;
+}
+
+body{
+    background-color: black !important;
+}
+
+#marcus{
+    margin-left: 450px;
+}
+
+.paragraph{
+    font-family: 'mc';
+}
+
+#firstparagraph{
+    margin-left: 10px;
+}
+
+.smallheader{
+    font-size: 90px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+#image2{
+    mix-blend-mode:hard-light;
+}
+
+#image5{
+    filter: grayscale(95%);
+    mix-blend-mode: hard-light;
+    width: 35%;
+}
+
+.meditations{
+    margin-right: 270px;
+}
+
+.lightbutton{
+    background-color: white;
+}
+
+.darkbutton{
+    background-color: black;
+}
+
+#nav a {
+    color: white;
+}
+
+#nav button{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}

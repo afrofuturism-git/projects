@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Petemoss&display=swap");
+
+@font-face {
+    font-family: "ectoblst";
+    src: url("fonts/ECTOBLST.TTF");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "pixeloid";
+    src: url("fonts/PixelifySans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "baskerville";
+    src: url("fonts/Baskervville-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	background-color: #000000;
+}
+
+.book {
+	--book-height: 100vh;
+	--book-ratio: 1.4;
+}
+
+.book > div {
+	height: var(--book-height);
+	width: calc(var(--book-height) / var(--book-ratio));
+	overflow: auto;
+	background-color: #F5E6D9;
+	transform: scale(0.9);
+	border-radius: 6px;
+	transform-origin: left;
+}
+
+.book-cover {
+	display: flex;
+	justify-content: left;
+	align-items: top;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	background-color: #F5E6D9;
+	color: white;
+	transition: transform 2s;
+}
+
+.book-cover::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+	background-color: #f1dfb7;
+}
+
+.book-cover-heading{
+	font-family: "ectoblst", cursive;
+	font-size: 72px;
+	color: #000000;
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+h2 {
+	font-size: 16px;
+}
+
+
+
+.book-content {
+	transform: scale(0.9) translateY(30px);
+	background-color: #f8eee7 !important;
+	transition: all 0.3s 1s;
+}
+
+.book-content h3,
+.book-content p {
+	opacity: 0;
+	transition: all 0.3s 0.3s;
+}
+
+h3 {
+	padding: 30px;
+}
+
+p {
+	padding: 0px 30px 10px 30px;
+	text-align: justify;
+	font-size: 14px;
+}
+
+.book-cover > div {
+	transition: opacity 0s 0.6s;
+}
+
+.book:hover > .book-cover {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+.book:hover > .book-cover > div {
+	opacity: 0;
+}
+
+.book:hover > .book-content {
+	transform: scale(0.9) translateY(0px);
+}
+
+.book:hover > .book-content h3,
+.book:hover > .book-content p {
+	opacity: 1;
+}
+
+
+.book-link{
+    text-decoration: none;
+    color: black;
+}
+/* Your previous CSS styles for the book and content */
+/* ... */
+
+.imagehover :hover{
+	border: 2px solid black;
+}
