@@ -1,0 +1,19 @@
+.on{
+    background-color: rgb(163, 163, 238);
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.inputContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#to, #input{
+    margin-right: 10px;
+}

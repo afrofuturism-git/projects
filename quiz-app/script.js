@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-let questionList = []
-const buttonList = document.getElementById('buttonlist');
+const buttonList = [...document.getElementById('buttonlist').querySelectorAll('button')];
 let quizData ={"response_code":0,
 "results":[{"type":"multiple","difficulty":"easy","category":"Entertainment: Video Games","question":"Which of 2 Valve Games are set in the same universe?","correct_answer":"Half-life and Portal","incorrect_answers":["Portal and Left 4 Dead","Half-life and Left 4 Dead","Half-life and Counter Strike"]},
 {"type":"multiple","difficulty":"medium","category":"Geography","question":"What&#039;s the first National Park designated in the United States?","correct_answer":"Yellowstone","incorrect_answers":["Sequoia ","Yosemite","Rocky Mountain"]},
@@ -13,19 +12,39 @@ let quizData ={"response_code":0,
 {"type":"multiple","difficulty":"medium","category":"General Knowledge","question":"Which of the following Ivy League universities has its official motto in Hebrew as well as in Latin?","correct_answer":"Yale University","incorrect_answers":["Princeton University","Harvard University","Columbia University"]},
 {"type":"multiple","difficulty":"easy","category":"Entertainment: Music","question":"Who was &quot;Kung Fu Fighting&quot; in 1974?","correct_answer":"Carl Douglas","incorrect_answers":["The Bee Gees","Heatwave","Kool &amp; the Gang"]}]}
 
-
-for (let i = 0; i < 10; i++) {
-  questionList.push({
-    question: quizData['results'][i]['question'],
-    answers: [quizData['results'][i]['correct_answer'], ...quizData['results'][i]['incorrect_answers']]
-  });
+let questionList =[]
+for(let i = 0; i < 10; i++){
+ questionList.push({
+  question: quizData.results[i]['question'],
+  answer: quizData.results[i]['correct_answer'],
+  wrong_answer: quizData.results[i]['incorrect_answers']
+ })
 }
 
-function randomIndex(maxIndex){
-  return Math.floor(Math.random()*maxIndex)
+let fake ={
+  answer: '',
+  wrong: '',
+  yes:'',
+  hi:''
 }
-let buttons = buttonList.querySelectorAll('button')
-console.log(buttons[randomIndex(4)])
+
+buttonList.splice(randomIndex,1)
+
+conconsole.log(fake)
+for (const iterator in fake) {
+  console.log(buttonList)
+
+buttonList.splice(randomIndex,1)
+
+conconsole.log(fake)buttonList.splice(randomIndex,1)
+console.log(buttonList)
+}
+
+console.log(fake)
+
+
+
+
 
 
 
